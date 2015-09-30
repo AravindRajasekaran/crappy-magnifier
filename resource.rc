@@ -20,40 +20,44 @@ IDI_MAIN ICON "main.ico"
 
 IDM_MAIN MENU
 {
- 	POPUP "&Preferences"
- 	{
-		POPUP "&Algorithm"
-		{
-			MENUITEM "&Bilinear", IDM_ALG_LINEAR
-			MENUITEM "&Nearest Neighbor", IDM_ALG_NEAREST
-		}
+    POPUP "&Preferences"
+    {
+        POPUP "&Algorithm"
+        {
+            MENUITEM "&Bilinear", IDM_ALG_LINEAR
+            MENUITEM "&Nearest Neighbor", IDM_ALG_NEAREST
+        }
 
-  		POPUP "&Zoom"
-		{
-			MENUITEM "-", IDM_ZOOM
-			MENUITEM "-", IDM_ZOOM + 1
-			MENUITEM "-", IDM_ZOOM + 2
-			MENUITEM "-", IDM_ZOOM + 3
-			MENUITEM "-", IDM_ZOOM + 4
-			MENUITEM "-", IDM_ZOOM + 5
-			MENUITEM "-", IDM_ZOOM + 6
-			MENUITEM "-", IDM_ZOOM + 7
-			MENUITEM "-", IDM_ZOOM + 8
-			MENUITEM "-", IDM_ZOOM + 9
-		}
+        POPUP "&Zoom"
+        {
+            MENUITEM "-", IDM_ZOOM
+            MENUITEM "-", IDM_ZOOM + 1
+            MENUITEM "-", IDM_ZOOM + 2
+            MENUITEM "-", IDM_ZOOM + 3
+            MENUITEM "-", IDM_ZOOM + 4
+            MENUITEM "-", IDM_ZOOM + 5
+            MENUITEM "-", IDM_ZOOM + 6
+            MENUITEM "-", IDM_ZOOM + 7
+            MENUITEM "-", IDM_ZOOM + 8
+            MENUITEM "-", IDM_ZOOM + 9
+        }
 
-		POPUP "&Update Rate"
-		{
-			MENUITEM "-", IDM_FPS
-			MENUITEM "-", IDM_FPS + 1
-			MENUITEM "-", IDM_FPS + 2
-			MENUITEM "-", IDM_FPS + 3
-			MENUITEM "-", IDM_FPS + 4
-			MENUITEM "-", IDM_FPS + 5
-			MENUITEM "-", IDM_FPS + 6
-			MENUITEM "-", IDM_FPS + 7
-			MENUITEM "-", IDM_FPS + 8
-			MENUITEM "-", IDM_FPS + 9
-		}
-	}
+        POPUP "&Update Rate"
+        {
+            MENUITEM "-", IDM_FPS
+            MENUITEM "-", IDM_FPS + 1
+            MENUITEM "-", IDM_FPS + 2
+            MENUITEM "-", IDM_FPS + 3
+            MENUITEM "-", IDM_FPS + 4
+            MENUITEM "-", IDM_FPS + 5
+            MENUITEM "-", IDM_FPS + 6
+            MENUITEM "-", IDM_FPS + 7
+            MENUITEM "-", IDM_FPS + 8
+            MENUITEM "-", IDM_FPS + 9
+        }
+
+        MENUITEM SEPARATOR
+
+        MENUITEM "A&bout", IDM_ABOUT
+    }
 }
