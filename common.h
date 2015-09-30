@@ -16,6 +16,8 @@
 
 #include "resource.h"
 
+#define VERSION     "1.0"
+
 #define UM_RESIZE   WM_USER + 1
 
 #define RS_CLIENT   0

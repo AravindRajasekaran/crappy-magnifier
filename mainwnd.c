@@ -91,6 +91,13 @@ void MainWND_LoadConfig(HWND wnd)
     CheckMenuItem(menu, IDM_ALG_LINEAR, MF_BYCOMMAND | MF_CHECKED);
 }
 
+void MainWND_About(HWND hwnd)
+{
+    char content[100];
+    sprintf(content, "Crappy Magnifier v%s\n\nThe crappiest magnifier in the world!", VERSION);
+    MessageBox(hwnd, content, "About Crappy Magnifier", MB_OK);
+}
+
 LRESULT APIENTRY MainWND_Proc(HWND hwnd, UINT umsg, WPARAM wparam, LPARAM lparam)
 {
     int i;
@@ -244,6 +251,10 @@ LRESULT APIENTRY MainWND_Proc(HWND hwnd, UINT umsg, WPARAM wparam, LPARAM lparam
                                 MainWND.resize_alg = 1;
                                 CheckMenuItem(menu, IDM_ALG_LINEAR, MF_BYCOMMAND | MF_UNCHECKED);
                                 CheckMenuItem(menu, IDM_ALG_NEAREST, MF_BYCOMMAND | MF_CHECKED);
+                                break;
+                            case IDM_ABOUT:
+                                MainWND_About(hwnd);
+                                break;
                         }
                     }
             }
@@ -327,7 +338,7 @@ void MainWND_Create()
     RegisterClassEx(&wcx) || Die(DT_WINAPI);
 
     MainWND.hwnd = CreateWindowEx(
-            WS_EX_TOPMOST, "MainWND_class", "Magnifier",
+            WS_EX_TOPMOST, "MainWND_class", "Crappy Magnifier",
             WS_POPUP | WS_SYSMENU | WS_CAPTION | WS_MINIMIZEBOX | WS_VISIBLE
             | WS_CLIPCHILDREN | WS_CLIPSIBLINGS,
             cfg.mw_x, cfg.mw_y, 0, 0,
