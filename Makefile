@@ -17,7 +17,7 @@ LIBS:=-lgdi32 -lopengl32
 all: $(EXE)
 
 clean:
-	del $(EXE) $(OBJS)
+	del $(EXE) $(OBJS) magnifier.cfg
 
 $(EXE): $(OBJS)
 	$(CC) $(LDFLAGS) -o $@ $^ $(LIBS)
